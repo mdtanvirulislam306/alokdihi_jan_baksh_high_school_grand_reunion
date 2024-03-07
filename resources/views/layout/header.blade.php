@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('/') }}assets/font/flaticon.css">
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+    {{--Toastify--}}
+    <link rel="stylesheet" href="{{ asset('assets/css/toastify.min.css') }}" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('/') }}assets/css/style.css">
 </head>

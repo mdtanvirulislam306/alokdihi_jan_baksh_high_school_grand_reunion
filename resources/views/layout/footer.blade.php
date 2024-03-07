@@ -6,5 +6,7 @@
 <script src="{{ asset('/') }}assets/js/imagesloaded.pkgd.min.js"></script>
 <!-- Validator js -->
 <script src="{{ asset('/') }}assets/js/validator.min.js"></script>
+{{--Toastify--}}
+<script src="{{ asset('assets/js/toastify-js.js')  }}" ></script>
 <!-- Custom Js -->
 <script src="{{ asset('/') }}assets/js/main.js"></script>
