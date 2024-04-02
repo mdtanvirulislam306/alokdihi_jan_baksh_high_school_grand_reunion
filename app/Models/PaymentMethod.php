@@ -12,12 +12,10 @@ class PaymentMethod extends Model
     public $timestamps = false;
 
     const BKASH = 1;
-    const NAGOD = 2;
-    const ROCKET = 3;
+    const BANK = 2;
     const PAYMENT_METHODS = [
         self::BKASH =>'Bkash',
-        self::NAGOD =>'Nagod',
-        self::ROCKET =>'Rocket',
+        self::BANK =>'Bank Asia',
     ];
     const INACTIVE = 0;
     const ACTIVE = 1;
@@ -31,5 +29,8 @@ class PaymentMethod extends Model
         self::DELETED_NO=>"Deleted",
         self::DELETED_YES=>"Not Deleted",
     ];
-
+    public function reunion()
+    {
+        return $this->belongsTo(ReunionRegistratioinDetail::class, 'reunion_registration_details_id');
+    }
 }

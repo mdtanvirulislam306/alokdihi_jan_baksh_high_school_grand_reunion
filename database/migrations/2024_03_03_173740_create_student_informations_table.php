@@ -17,8 +17,9 @@ class CreateStudentInformationsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('phone');
-            $table->string('image')->nullable();
             $table->string('passing_year');
+            $table->string('current_student')->nullable();
+            $table->string('sponsor')->nullable();
             $table->string('gender')->comment('1 = male, 2 = female');
             $table->unsignedTinyInteger('status')->default(1)->comment('0=inactive,1=active');
             $table->timestamp('created_at')->nullable();

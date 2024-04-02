@@ -7,6 +7,8 @@
     @yield('content')
 @include('layout.footer')
 @include('layout._partials._toastify')
+@yield('modals')
 @yield('js')
+
 </body>
 </html>

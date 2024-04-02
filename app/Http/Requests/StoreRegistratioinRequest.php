@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreRegistratioinRequest extends FormRequest
 {
@@ -25,7 +26,9 @@ class StoreRegistratioinRequest extends FormRequest
     {
         return [
             'name'=>'required|string',
-            'phone'=>'required|numeric',
+            'phone'=>['required','numeric',Rule::unique('student_informations', 'phone')->where(function ($query) {
+                    $query->where('deleted', 0);
+                }),],
             'passing_year'=>'required|numeric',
             'gender'=>'required',
             't_shirt_size'=>'required',

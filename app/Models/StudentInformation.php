@@ -23,7 +23,7 @@ class StudentInformation extends Model
         self::DELETED_YES=>"Not Deleted",
     ];
 
-    public function detail()
+    public function details()
     {
         return $this->hasOne(ReunionRegistrationDetail::class,'student_id','id');
    }

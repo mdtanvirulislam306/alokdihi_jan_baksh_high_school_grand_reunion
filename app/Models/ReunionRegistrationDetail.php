@@ -13,7 +13,7 @@ class ReunionRegistrationDetail extends Model
     const PAYMENT_UNPAID = 0;
     const PAYMENT_PAID = 1;
     CONST PAYMENT_STATUSES = [
-      self::PAYMENT_UNPAID => "Un Paid",
+      self::PAYMENT_UNPAID => "Unpaid",
       self::PAYMENT_PAID => "Paid",
     ];
 
@@ -32,7 +32,11 @@ class ReunionRegistrationDetail extends Model
 
     public function method()
     {
-        return $this->hasOne(PaymentMethod::class,'reunion_registration_details_id','id');
+        return $this->hasOne(PaymentMethod::class,'reunion_registration_details_id');
+    }
+    public function student()
+    {
+        return $this->belongsTo(StudentInformation::class, 'student_id');
     }
 
 }
